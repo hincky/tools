@@ -90,7 +90,31 @@ python deduplicator.py input.xlsx --config custom_config.ini
 - 数据清洗
 
 
+### 3. Excel 数据清洗工具 (cleaner.py)
 
+根据关键词过滤数据，支持：
+- 指定多个清洗列
+- 自定义过滤关键词
+- 保留原始数据结构
+
+#### 使用方法
+
+```bash
+python cleaner.py input.xlsx [选项]
+```
+
+选项：
+- `--output-dir`: 指定输出目录
+- `--config`: 指定配置文件路径
+
+#### 配置说明
+在 `config.ini` 中设置：
+```ini
+[columns]
+clean_columns = C, D, E
+[filter]
+keywords = 软床, 电视柜, 茶几, 床头柜, 床垫, 圆桌, 椅, 售后
+```
 ## 开发环境
 
 - Python 3.6+
